@@ -182,4 +182,8 @@ form input{
     margin: 10px 0;
     background: rgba(212, 220, 255, 0.178);
 }
+#captcha-correcto, #captcha-erroneo{
+    display: none;
+}
+
 /*Final Contact*/

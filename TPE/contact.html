@@ -24,15 +24,19 @@
         </ul>
     </nav>
     <div class="formulario-contacto">
-        <form action="">
+        <form id="formulario" action="">
             <label for="nombre">Nombre:</label><input type="text" name="nombre" value="" class="container-nombre">
             <label for="email">Email:</label> </label> <input type="email" name="email" class="container-email">
             <textarea class="textbox" name="" cols="40" rows="10"></textarea>
-            <button id="btn-enviarform">Send</button>
+            <h1 id="captcha"></h1>
+            <input type="text" id="captcha-ingresado">
+            <button type="submit" id="btn-enviarform">Send</button>
+            <div id="captcha-correcto"><h2>Su mensaje se ha enviado con exito!</h1></div>
+            <div id="captcha-erroneo"><h2>CAPTCHA INCORRECTO, vuelve a intentarlo</h2></div>
         </form>
     </div>
     <div>
-        <h1 id="captcha"></h1>
+        
     </div>
     <script src="js/captchaGenerator.js"></script>
 </body>
