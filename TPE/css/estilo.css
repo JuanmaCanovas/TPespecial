@@ -1,89 +1,100 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+body {
     height: 100vh;/*Para que el gradient ocupe el 100% de la pantalla*/
     background: linear-gradient(to bottom right, darkviolet 15%, darkorange 100%);
-    background-repeat: no-repeat; /*Evita que se repita*/
+    background-repeat: no-repeat;/*Evita que se repita*/
     background-attachment: fixed;/*Hace que el background ocupe el espacio que ocupa todo el documento body*/
 }
-#menu{
+/*Nav*/
+#menu {
     background: linear-gradient(to bottom right, darkorange -50%, darkviolet 100%);
 }
-#menu ul li{
-    display: inline-block; /* Para que los botones de seccion queden en linea y no uno abajo del otro*/
+#menu nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
-#menu ul li a{
+#menu nav ul li {
+    display: inline-block;/* Para que los botones de seccion queden en linea y no uno abajo del otro*/
+}
+#menu nav ul li a {
     text-decoration: none;
     display: block;/*Para que ocupe todo el espacio que se le seteo*/
     font-family: 'Roboto', sans-serif;
     padding: 20px 50px;
     color: rgb(212, 220, 255);
 }
-#menu ul li a:hover{
+#menu nav ul li a:hover {
     background: rgb(212, 220, 255);
     color: rgb(30, 51, 97);
     font-weight: bold;
 }
-.contenedor-principal{
+/*Final Nav*/
+/*Comienzo css index*/
+section {
     display: flex;
 }
-/*Comienzo css index*/
-.contenedor-nombreyprofesion{
+.logo {
+    margin-top: 15vh;
+    margin-left: 25vh;
+}
+.gif {
+    max-width: 59vh;
+    max-height: 65vh;
+    border-radius: 10%;
+}
+.nombre{
+    font-size: 60px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(212, 220, 255);
+}
+.profesion{
+    color: rgb(212, 220, 255);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+}
+.conteiner-nameprof {
     margin-top: 40vh;
     margin-left: 10vh;
 }
-.logo {
-    max-width: 80vh;
-    max-height: 80vh;
-    border-radius: 10%;
-}
-.contenedor-logo {
-    margin-top: 20vh;
-    margin-left: 45vh;
-}
-.name {
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 90px;
-}
-.profesion {
-    color: white;
-    font-size: 50px;
-}
-/*Final index*/
+/*Final index*
 /*Comienzo About me*/
-.contenedor-descripcion{
+.descripcion {
     max-width: 500px;
     max-height: 500px;
     margin-left: 50vh;
-    margin-top: 25vh;
+    margin-top: 15vh;
 }
-.contenedor-descripcion img{
-    float:left;
-    margin-right: 5px;
-    max-width: 250px;
-    max-height: 250px;
+.descripcion img {
+    float: left;
+    margin-right: 10px;
+    max-width: 260px;
+    max-height: 145px;
 }
-.contenedor-descripcion p{
+.descripcion p {
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
-    color:whitesmoke; 
+    color: whitesmoke;
 }
-.contenedor-descripcion h1 {
+.descripcion h1 {
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
 .skills {
     margin-left: 18vh;
-    margin-top: 24vh;
+    margin-top: 15vh;
 }
 .skills h2 {
     color: white;
     margin-left: 0;
     margin-bottom: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .skills ul {
     list-style: none;
@@ -93,6 +104,7 @@ body{
     margin-right: 5vh;
     float: right;
     color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .html-icon {
     font-size: 80px;
@@ -105,7 +117,6 @@ body{
     background: linear-gradient(to right, rgb(38, 77, 228) 50%, rgb(41, 101, 241)50%);
     -webkit-background-clip: text;
     color: transparent;
-
 }
 .js-icon {
     font-size: 75px;
@@ -121,34 +132,39 @@ body{
 }
 /*Final About me*/
 /*Comienzo Portfolio*/
-.contenedor-trabajos {
-    margin-top: 3vh;
-    margin-left: 20vh;
+.trabajos {
+    margin-top: 10vh;
+    margin-left: 30vh;
 }
-.contenedor-trabajos ul {
-    list-style:none;
+.trabajos ul {
+    list-style: none;
+    display: flex;
 }
-#work1, #work2, #work3, #work4 {
-    margin-top:1vh;
-    margin-bottom: 2vh;
+.trabajos ul li {
+    width: 256px;
+    text-align: center;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#work1,#work2,#work3,#work4 {
+    margin-top: 1px;
     width: 250px;
-    height: 180px;
+    height: 160px;
     position: relative;
 }
-.container-tabla{
-    margin-left: 60vh;
-    margin-top: 25vh;
+.tabla {
+    margin-left: 5vh;
+    margin-top: 20vh;
 }
-table{
+table {
     border-collapse: separate;
     border-spacing: 3px;
     background-color: rgba(212, 220, 255, 0.089);
-    justify-content: center;
 }
-th{
+th {
     font-size: 23px;
 }
-td, th{
+td,th {
     text-align: center;
     color: rgb(212, 220, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -159,7 +175,6 @@ td, th{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 80vh;
 }
 .textbox {
@@ -169,21 +184,53 @@ form {
     display: flex;
     flex-direction: column;
 }
-label{
+label {
     color: rgb(212, 220, 255);
 }
-form input{
+form input {
     padding: 10px;
     margin: 5px 0;
 }
-.container-nombre, .container-email, .textbox, .btn-enviarform {
+form h1,h2,h3 {
+    text-align: center;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.conteiner-captchayrefresh{
+    align-items: center;
+    justify-content: center;
+}
+#captcha{
+    display: inline;
+    border: 1px solid;
+    border-color: skyblue;
+    width: 35%;
+    color: rgb(212, 220, 255);
+    background: rgba(212, 220, 255, 0.178);
+}
+.iconify {
+    background: url('https://api.iconify.design/dashicons:controls-repeat.svg') no-repeat center center / contain;
+    height: 35px;
+    width: 35px;
+}
+.iconify:hover{
+    background-color: aliceblue;
+    border-radius: 10%;
+}
+#refresh-captcha {
+    display: inline;
+    margin-bottom: 0;
+    width: 35px;
+    background: none;
+    border: none;
+}
+#captcha-correcto, #captcha-erroneo{
+    display: none;
+}
+.container-nombre,.container-email,.textbox,.btn-enviarform {
     border: none;
     border-style: groove;
     margin: 10px 0;
     background: rgba(212, 220, 255, 0.178);
 }
-#captcha-correcto, #captcha-erroneo{
-    display: none;
-}
-
 /*Final Contact*/

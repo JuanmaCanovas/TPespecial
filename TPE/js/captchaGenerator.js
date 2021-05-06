@@ -19,3 +19,7 @@ form.addEventListener("submit", function(event)
     else
     document.getElementById("captcha-erroneo").style.display="flex";
 });
+document.getElementById("refresh-captcha").addEventListener("click", refresh);
+function refresh(){
+    document.getElementById("captcha").innerHTML=crearcaptcha();
+}

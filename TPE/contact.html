@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css\estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>Portfolio Online</title>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <title>Contact</title>
 </head>
+
 <body>
-    <nav id="menu">
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="about-me.html">About me</a>
-            </li>
-            <li>
-                <a href="portfolio.html">Portfolio</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </nav>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="formulario-contacto">
         <form id="formulario" action="">
-            <label for="nombre">Nombre:</label><input type="text" name="nombre" value="" class="container-nombre">
-            <label for="email">Email:</label> </label> <input type="email" name="email" class="container-email">
+            <label for="nombre">Nombre:</label><input type="text" name="nombre" required value="" class="container-nombre">
+            <label for="email">Email:</label> </label> <input type="email" required name="email" class="container-email">
             <textarea class="textbox" name="" cols="40" rows="10"></textarea>
-            <h1 id="captcha"></h1>
+            <div class="conteiner-captchayrefresh">
+                <h1 id="captcha"></h1>
+                <button type="reset" id="refresh-captcha"><span class="iconify" data-icon="dashicons:controls-repeat" data-inline="false"></span></button>
+            </div>
             <input type="text" id="captcha-ingresado">
             <button type="submit" id="btn-enviarform">Send</button>
-            <div id="captcha-correcto"><h2>Su mensaje se ha enviado con exito!</h1></div>
+            <div id="captcha-correcto"><h2>Su mensaje se ha enviado con exito!</h2></div>
             <div id="captcha-erroneo"><h2>CAPTCHA INCORRECTO, vuelve a intentarlo</h2></div>
         </form>
     </div>
-    <div>
-        
-    </div>
     <script src="js/captchaGenerator.js"></script>
 </body>
+
 </html>
