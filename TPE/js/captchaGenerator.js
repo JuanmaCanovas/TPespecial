@@ -7,8 +7,8 @@ function crearcaptcha() {
     return temp;
 };
 document.getElementById("captcha").innerHTML=crearcaptcha();
-let form = document.getElementById("formulario");
-form.addEventListener("submit", function(event)
+document.getElementById("btn-enviarform").
+addEventListener("click", function(event)
 {
     event.preventDefault();
     let string1 = document.getElementById("captcha").innerHTML;
@@ -17,9 +17,13 @@ form.addEventListener("submit", function(event)
         document.getElementById("captcha-correcto").style.display="flex";
     }
     else
-    document.getElementById("captcha-erroneo").style.display="flex";
+        document.getElementById("captcha-erroneo").style.display="flex";
 });
 document.getElementById("refresh-captcha").addEventListener("click", refresh);
 function refresh(){
+    event.preventDefault();
     document.getElementById("captcha").innerHTML=crearcaptcha();
+    document.getElementById("captcha-erroneo").style.display="none";
+    document.getElementById("captcha-correcto").style.display="none";
 }
+
