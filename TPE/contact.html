@@ -22,17 +22,24 @@
     </div>
     <div class="formulario-contacto">
         <form>
-            <label for="nombre">Nombre:</label><input type="text" name="nombre" required value="" class="container-nombre">
-            <label for="email">Email:</label> </label> <input type="email" required name="email" class="container-email">
+            <label for="nombre">Nombre:</label><input type="text" name="nombre" required value=""
+                class="container-nombre">
+            <label for="email">Email:</label> </label> <input type="email" required name="email"
+                class="container-email">
             <textarea class="textbox" name="" cols="40" rows="10"></textarea>
             <div class="conteiner-captchayrefresh">
                 <h1 id="captcha"></h1>
-                <button type="reset" id="refresh-captcha"><span class="iconify" data-icon="dashicons:controls-repeat" data-inline="false"></span></button>
+                <button type="reset" id="refresh-captcha"><span class="iconify" data-icon="dashicons:controls-repeat"
+                        data-inline="false"></span></button>
             </div>
             <input type="text" id="captcha-ingresado">
             <button type="submit" id="btn-enviarform">Send</button>
-            <div id="captcha-correcto"><h2>Su mensaje se ha enviado con exito!</h2></div>
-            <div id="captcha-erroneo"><h2>CAPTCHA INCORRECTO, vuelve a intentarlo</h2></div>
+            <div class="ocultar msj-enviado">
+                <h2>Su mensaje se ha enviado con exito!</h2>
+            </div>
+            <div class="ocultar msj-error">
+                <h2>CAPTCHA INCORRECTO, vuelve a intentarlo</h2>
+            </div>
         </form>
     </div>
     <script src="js/captchaGenerator.js"></script>

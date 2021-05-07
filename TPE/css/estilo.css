@@ -156,9 +156,12 @@ section {
     margin-left: 5vh;
     margin-top: 20vh;
 }
+table,tr,td{
+    border: 2px solid rgb(212, 220, 255);
+    padding: 3px;
+}
 table {
-    border-collapse: separate;
-    border-spacing: 3px;
+    border-collapse: collapse;
     background-color: rgba(212, 220, 255, 0.089);
 }
 th {
@@ -224,13 +227,14 @@ form h1,h2,h3 {
     background: none;
     border: none;
 }
-#captcha-correcto, #captcha-erroneo{
-    display: none;
-}
+
 .container-nombre,.container-email,.textbox,.btn-enviarform {
     border: none;
     border-style: groove;
     margin: 10px 0;
     background: rgba(212, 220, 255, 0.178);
+}
+.ocultar{
+    display: none;
 }
 /*Final Contact*/
